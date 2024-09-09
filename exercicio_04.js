@@ -12,7 +12,8 @@ for (let i = 0; i < 5; i++) {
     listaSalarios.push(salario);
 }
 
-let mensagem = "";
+let mensagem = "Salarios Líquidos: \n";
+
 for (let j = 0; j < listaSalarios.length; j++) {
 
     // F1: 
@@ -22,9 +23,9 @@ for (let j = 0; j < listaSalarios.length; j++) {
     // F2: 100-12 = 88 
     // salarioliquido =  salariobruto X 88/100;
 
-    // F1: let salLiquido =  listaSalarios[j] - (listaSalarios[j] * (12/100)); 
-    let salLiquido = listaSalarios[j] * (88 / 100);
-    mensagem += "Salarios Líquidos: \n";
+    let salLiquido =  listaSalarios[j] - (listaSalarios[j] * (12/100)); 
+    //let salLiquido = listaSalarios[j] * (88 / 100);
+
     mensagem += "R$ " + salLiquido.toFixed(2) + "\n";
 }
 alert(mensagem);
