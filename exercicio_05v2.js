@@ -51,9 +51,11 @@ function mostrarVetor(vetor) {
     return mensagem;
 }
 
-let textoFinal = "Principal: " + mostrarVetor(listaPrincipal) + "\n";
-textoFinal +=  "Pares: " + mostrarVetor(listaPares) + "\n";
-textoFinal += "Impares: " + mostrarVetor(listaImpares);
+let textoListaInteira =  "Principal: " + mostrarVetor(listaPrincipal) + "\n";
+let textoPares =  "Pares: " + mostrarVetor(listaPares) + "\n";
+let textoImpares =  "Impares: " + mostrarVetor(listaImpares);
+
+let textoFinal = textoListaInteira + textoPares + textoImpares;
 
 alert(textoFinal);
 
