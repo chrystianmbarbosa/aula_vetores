@@ -32,11 +32,6 @@ function guardarParesImpares(lista) {
     }
 }
 
-let listaPrincipal = lerNumeros();
-let listaPares = [];
-let listaImpares = [];
-guardarParesImpares(listaPrincipal);
-
 function mostrarVetor(vetor) {
     let mensagem = "";
     for (let k = 0; k < vetor.length; k++) {
@@ -50,11 +45,26 @@ function mostrarVetor(vetor) {
     }
     return mensagem;
 }
+//faço a chamada da função de leitura de numeros: nessa função o vetor fica declarado na função e devolve a lista cheia.
+let listaPrincipal = lerNumeros();
 
+let listaPares = [];
+let listaImpares = [];
+
+//faço a chamada da função que insere os numeros da listaPrincipal na lista de par ou impar
+guardarParesImpares(listaPrincipal);
+
+// faço uma chamada a função que pega o conteúdo da listaPrincipal e monto um texto com o conteúdo dela
 let textoListaInteira =  "Principal: " + mostrarVetor(listaPrincipal) + "\n";
+
+// faço uma chamada a função que pega o conteúdo da listaPares e monto um texto com o conteúdo dela
 let textoPares =  "Pares: " + mostrarVetor(listaPares) + "\n";
+
+// faço uma chamada a função que pega o conteúdo da listaImpares e monto um texto com o conteúdo dela
 let textoImpares =  "Impares: " + mostrarVetor(listaImpares);
 
+
+// junto os conteúdos em uma variavel de texto final para exibir em um alerta só.
 let textoFinal = textoListaInteira + textoPares + textoImpares;
 
 alert(textoFinal);
